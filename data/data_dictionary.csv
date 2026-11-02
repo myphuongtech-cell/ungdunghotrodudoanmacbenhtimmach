@@ -1,0 +1,16 @@
+Cột,Ý nghĩa,Kiểu,Giá trị / đơn vị
+age,Tuổi,Số nguyên,năm
+sex,Giới tính,Nhị phân,0 = nữ; 1 = nam
+cp,Loại đau ngực,Phân loại,0-3 (mã hóa theo bộ dữ liệu)
+trestbps,Huyết áp tâm thu lúc nghỉ,Số nguyên,mmHg
+chol,Cholesterol huyết thanh,Số nguyên,mg/dl
+fbs,Đường huyết đói > 120 mg/dl,Nhị phân,0 = không; 1 = có
+restecg,Kết quả điện tâm đồ lúc nghỉ,Phân loại,0-2
+thalach,Nhịp tim tối đa đạt được,Số nguyên,nhịp/phút
+exang,Đau thắt ngực khi gắng sức,Nhị phân,0 = không; 1 = có
+oldpeak,ST chênh xuống do gắng sức so với lúc nghỉ,Số thực,đơn vị ST
+slope,Độ dốc đoạn ST khi gắng sức đỉnh,Phân loại,0-2
+ca,Số mạch máu chính (0-3) thấy hẹp qua huỳnh quang,Số nguyên,0-3
+thal,Kết quả thalassemia,Phân loại,1-3 (giá trị 0 là không hợp lệ)
+target,Nhãn gốc của file tải về,Nhị phân,"Xem notebook 01: nhãn gốc bị đảo (1 = không bệnh)"
+HeartDisease,Nhãn dùng trong bài (= 1 - target),Nhị phân,1 = có bệnh tim; 0 = không

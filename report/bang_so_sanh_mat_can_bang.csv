@@ -1,0 +1,7 @@
+Mô hình,Cách xử lý,accuracy,precision,recall,f1
+Logistic Regression,Không xử lý,0.845,0.858,0.8,0.825
+Logistic Regression,class_weight,0.853,0.852,0.83,0.839
+Logistic Regression,SMOTE,0.849,0.848,0.824,0.834
+Random Forest,Không xử lý,0.82,0.816,0.794,0.801
+Random Forest,class_weight,0.824,0.821,0.8,0.807
+Random Forest,SMOTE,0.82,0.819,0.788,0.8

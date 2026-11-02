@@ -1,0 +1,5 @@
+Kính gửi thầy/cô [tên giảng viên],
+Em là [họ tên], MSSV [MSSV], lớp học phần 020100138002 (Lập trình Python, HK1 2026-2027).
+Em/nhóm em xin thông báo đã chọn Đề tài 2: Phân tích dữ liệu y tế và xây dựng ứng dụng hỗ trợ dự đoán nguy cơ mắc bệnh tim mạch.
+Thành viên nhóm: [danh sách]. Em xin cảm ơn thầy/cô.
+(Ghi chú: Notion ghi hạn thông báo là trước 20/10/2026. Hôm nay là 30/10, hãy kiểm tra xem bạn đã gửi chưa; nếu chưa, gửi ngay và chụp lại ngày giờ.)

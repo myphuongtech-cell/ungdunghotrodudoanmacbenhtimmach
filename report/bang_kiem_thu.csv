@@ -1,0 +1,10 @@
+Mã,Mô tả,Kết quả mong đợi,Kết quả thực tế,Đạt,Thời gian (ms)
+T1,"Ca bình thường: bệnh nhân không bệnh trong dữ liệu, ít dấu hiệu",Mức Thấp,"Xác suất 7.8%, mức Thấp",Đạt,6.3
+T2,"Ca bình thường: bệnh nhân có bệnh, nhiều mạch hẹp, oldpeak cao",Mức Cao,"Xác suất 98.8%, mức Cao",Đạt,6.0
+T3,Ca gần ngưỡng: xác suất gần 50%,Mức Trung bình hoặc Cao,"Xác suất 50.5%, mức Trung bình",Đạt,6.3
+T4,Biên dưới: mọi biến ở giá trị nhỏ nhất cho phép,"Chạy được, ra kết quả","Xác suất 48.7%, mức Trung bình",Đạt,8.3
+T5,Biên trên: mọi biến ở giá trị lớn nhất cho phép,"Chạy được, ra kết quả","Xác suất 99.2%, mức Cao",Đạt,6.6
+T6,Sai kiểu: tuổi nhập chữ,"Báo lỗi, không dự đoán","Báo lỗi: 'age' phải là số, nhận được 'abc'",Đạt,0.0
+T7,Ngoài khoảng: tuổi 300,"Báo lỗi, không dự đoán","Báo lỗi: 'age' = 300 ngoài khoảng hợp lệ [18, 100]",Đạt,0.0
+T8,Mã không hợp lệ: thal = 0,"Báo lỗi, không dự đoán","Báo lỗi: 'thal' = 0 ngoài khoảng hợp lệ [1, 3]",Đạt,0.0
+T9,Thiếu trường: bỏ cholesterol,"Báo lỗi, không dự đoán",Báo lỗi: Thiếu giá trị: chol,Đạt,0.0

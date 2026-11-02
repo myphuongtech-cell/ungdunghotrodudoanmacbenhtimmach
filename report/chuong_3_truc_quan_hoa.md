@@ -1,0 +1,27 @@
+# CHƯƠNG 3. TRỰC QUAN HÓA VÀ INSIGHT (bản nháp)
+
+Mã nguồn: `notebooks/02b_visualization.ipynb`. Hình trong `figures/`. n = 302 bệnh nhân sau làm sạch. Lưu ý chung: đây là nhóm bệnh nhân được chuyển tới khám nên "tỷ lệ có bệnh" bên dưới là tỷ lệ trong mẫu, không phải tỷ lệ mắc trong dân số.
+
+**Hình 3.1. Phân bố tuổi và giới tính** (`fig_3_1_tuoi_gioi_tinh.png`)
+Mẫu có 206 nam (68%) và 96 nữ. Tuổi trung bình nam 53,8, nữ 55,7, cả hai trải từ khoảng 30 đến 77 tuổi. Tỷ lệ có bệnh ở nam là 55,3%, ở nữ là 25,0%, tức nam cao hơn hơn hai lần. Điều này hợp với việc nam giới thường có nguy cơ mạch vành sớm hơn nữ, nhưng nhóm nữ chỉ có 96 người nên con số này kém chắc chắn hơn.
+
+**Hình 3.2. Phân bố các chỉ số chính** (`fig_3_2_phan_bo_chi_so.png`)
+Tuổi gần đối xứng (độ lệch −0,20, trung vị 55,5). Cholesterol lệch phải (độ lệch 1,15; trung bình 246,5 cao hơn trung vị 240,5) và oldpeak lệch phải rõ (1,27) với nhiều giá trị gần 0. Nhịp tim tối đa lệch trái nhẹ (−0,53). Ý nghĩa: các biến có thang đo rất khác nhau và phân bố lệch, nên cần chuẩn hóa trước khi đưa vào Logistic Regression, và cần cẩn trọng khi xóa ngoại lai vì đuôi phải là các ca nặng thật.
+
+**Hình 3.3. Huyết áp và cholesterol so với bệnh tim** (`fig_3_3_huyetap_cholesterol_vs_benh.png`)
+Nhóm có bệnh có huyết áp trung bình 134,4 mmHg so với 129,2 và cholesterol 251,1 so với 242,6 mg/dl. Kiểm định Mann-Whitney cho p = 0,032 (huyết áp) và p = 0,042 (cholesterol), có ý nghĩa ở mức 5% nhưng sát ngưỡng (và chưa hiệu chỉnh cho việc kiểm định nhiều lần). Hai hộp chồng lấn nhiều và trung vị huyết áp bằng nhau (130), nên mỗi chỉ số một mình phân biệt rất yếu. Ý nghĩa y tế: huyết áp và cholesterol là yếu tố nguy cơ dài hạn, không phải dấu hiệu cho thấy bệnh đang hiện diện ở thời điểm đo.
+
+**Hình 3.4. Tỷ lệ có bệnh theo nhóm chỉ số** (`fig_3_4_ty_le_nguy_co_theo_nhom.png`)
+Theo tuổi: 25% (dưới 45), 34% (45-54), 63% (55-64), 49% (từ 65). Nhóm 55-64 cao nhất; nhóm từ 65 giảm xuống nhưng chỉ có 41 người, nên không nên diễn giải là "già hơn thì ít nguy cơ hơn" (có thể do chọn mẫu). Theo huyết áp: 38%, 43%, 51%, 65% khi huyết áp tăng dần (dưới 120, 120-139, 140-159, từ 160), tăng đều. Theo cholesterol: 41%, 40%, 51% cho dưới 200, 200-239, từ 240; chỉ nhóm từ 240 nhỉnh hơn, quan hệ yếu. Ngưỡng nhóm theo phân loại thường dùng trong lâm sàng [ghi nguồn ngưỡng bạn dùng].
+
+**Hình 3.5. Loại đau ngực và đau thắt ngực khi gắng sức** (`fig_3_5_cp_exang.png`)
+Nhóm đau thắt ngực khi gắng sức (exang = 1) có tỷ lệ bệnh 77% so với 31% ở nhóm không đau (chênh khoảng 2,5 lần). Với loại đau ngực, mã `cp = 0` có tỷ lệ bệnh 73% (n = 143) còn các mã 1, 2, 3 chỉ 18%, 21%, 30%. Cần kiểm tra bảng mã của bản CSV này với tài liệu UCI trước khi gọi tên từng loại; theo y văn của bộ Cleveland, nhóm đau ngực không điển hình/không triệu chứng thường có tỷ lệ bệnh cao nhất, và mã 0 có thể tương ứng nhóm đó trong bản này [chưa xác minh, cần kiểm tra].
+
+**Hình 3.6. Nhịp tim tối đa theo tuổi** (`fig_3_6_thalach_theo_tuoi.png`)
+Nhịp tim tối đa giảm dần theo tuổi ở cả hai nhóm, nhưng ở mọi độ tuổi nhóm có bệnh nằm thấp hơn: trung bình 139 so với 158 nhịp/phút, chênh khoảng 19 nhịp. Nhịp tim tối đa thấp khi gắng sức gợi ý khả năng đáp ứng của tim kém hơn. Cùng chiều với đó, oldpeak trung bình ở nhóm có bệnh là 1,59 so với 0,59.
+
+**Hình 3.7. Ma trận tương quan** (`fig_3_7_ma_tran_tuong_quan.png`)
+Tương quan với nhãn mạnh nhất: `ca` (0,46), `exang` (0,44), `oldpeak` (0,43), `thalach` (−0,42), `thal` (0,36), `slope` (−0,34), rồi `sex` (0,28) và `age` (0,22). `cholesterol` (0,08) và `fbs` (0,03) gần như không tương quan. Hai điểm cần nói rõ: (1) `cp`, `thal`, `slope` là biến phân loại mã hóa số nên dấu và độ lớn Pearson chỉ mang tính tham khảo; (2) việc cholesterol yếu trong bộ dữ liệu này không có nghĩa nó không phải yếu tố nguy cơ, mà do mẫu nhỏ và nhóm bệnh nhân đã được chọn lọc.
+
+## Tổng kết chương
+Các dấu hiệu từ khám gắng sức và hình ảnh học (số mạch hẹp, ST chênh xuống, nhịp tim tối đa, đau thắt ngực khi gắng sức) liên quan tới bệnh mạnh hơn các chỉ số xét nghiệm thường gặp (cholesterol, đường huyết đói). Kết quả này định hướng cho phần Feature Importance ở Chương 4.
