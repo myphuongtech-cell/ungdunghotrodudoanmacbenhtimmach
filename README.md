@@ -1,6 +1,4 @@
-# Đề tài 2: Dự đoán nguy cơ bệnh tim mạch (Python, HK1 2026-2027)
-
-Tiến độ: đã xong dữ liệu, trực quan hóa, mô hình, tối ưu hóa nâng cao, ứng dụng Streamlit có giải thích từng ca, kiểm thử tự động và báo cáo Word (Chương 1-5).
+# Dự đoán nguy cơ bệnh tim mạch
 
 ## Cài đặt và chạy
 ```
@@ -24,6 +22,4 @@ Lưu ý: số liệu trong báo cáo sinh ra với scikit-learn 1.8.0 (đã ghim
 - `report/BaoCao_DeTai2.docx` báo cáo (Chương 1-5); `report/final/` nguồn markdown của báo cáo; `src/build_report.js` dựng file Word
 
 ## Nguồn dữ liệu
-Heart Disease, phần Cleveland (UCI Machine Learning Repository), bản CSV từ GitHub `kb22/Heart-Disease-Prediction`. Cần kiểm tra giấy phép trước khi nộp. Nhãn gốc `target` bị đảo, bài dùng `HeartDisease = 1 - target` (xem notebook 01).
-
-Công cụ học tập, không thay thế chẩn đoán của bác sĩ.
+Heart Disease, phần Cleveland (UCI Machine Learning Repository), bản CSV từ GitHub `kb22/Heart-Disease-Prediction`.
