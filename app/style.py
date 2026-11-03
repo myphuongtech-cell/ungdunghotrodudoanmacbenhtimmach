@@ -85,7 +85,7 @@ def css(low, high):
 HEART = '<svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 2.7 5 6 5c2 0 3.4 1.1 4 2.2h4C14.6 6.1 16 5 18 5c3.3 0 5.1 3.4 3.6 6.8C19.5 16.4 12 21 12 21z"/></svg>'
 
 def topbar():
-    return f'<div class="topbar"><div class="brand"><span class="logo">{HEART}</span>CardioCheck</div><div class="chip"><b>Công cụ học tập</b> · không thay thế chẩn đoán của bác sĩ</div></div>'
+    return f'<div class="topbar"><div class="brand"><span class="logo">{HEART}</span>ỨNG DỤNG HỖ TRỢ DỰ ĐOÁN MẮC BỆNH TIM MẠCH</div><div class="chip"'
 
 def level_pill(level):
     bg, fg, dot = LEVEL_STYLE[level]
